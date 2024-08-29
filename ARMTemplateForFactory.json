@@ -13,12 +13,12 @@
     },
     "resources": [
         {
-            "name": "[concat(parameters('factoryName'), '/afwprodcdwncus04')]",
+            "name": "[concat(parameters('factoryName'), '/afwprodcdwncus05')]",
             "type": "Microsoft.DataFactory/factories/integrationRuntimes",
             "apiVersion": "2018-06-01",
             "properties": {
                 "type": "Airflow",
-                "description": "afwprodcdwncus04",
+                "description": "afwprodcdwncus05",
                 "typeProperties": {
                     "computeProperties": {
                         "location": "South Central US",
@@ -48,7 +48,20 @@
                             "AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS": "False"
                         },
                         "environmentVariables": {
-                            "CDW_DAG_HOME": "/usr/local/airflow/dags"
+                            "CDW_DAG_HOME": "/usr/local/airflow/dags",
+                            "CDW_SNOWFLAKE_URL": "https://app.snowflake.com/central-us.azure/ul_datahub_nonprod/",
+                            "CDW_INFA_URL": "https://dm-us.informaticacloud.com/ma/sso/cTHkDDQ8MOqgFALFbuPY0C",
+                            "CDW_AIRFLOW_REPO": "https://github.com/Underwriters-Labs/EDMA-CDW-Airflow/tree/dev",
+                            "CDW_DELINEA_URL": "https://uls.secretservercloud.com",
+                            "CDW_DB_CONN_ID": "cdw_db_conn_id",
+                            "CDW_CONFIG_DB": "PROD_CDW_DB",
+                            "CDW_CONFIG_SCHEMA": "CDW",
+                            "CDW_ADLS_STAGE": "CDW_ADLS_STAGE",
+                            "CDW_CONN_DELINEA_ENV": "_CDW_DEV",
+                            "CDW_SOURCE_DB": "PROD_SOURCE_DB",
+                            "CDW_STAGE_DB": "PROD_STAGE_DB",
+                            "CDW_CONFORM_DB": "PROD_CONFORM_DB",
+                            "restartweb": "1"
                         },
                         "airflowRequirements": [
                             "azure-storage-blob==12.16.0"
