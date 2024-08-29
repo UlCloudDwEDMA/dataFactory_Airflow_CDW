@@ -79,7 +79,7 @@
                             "sshtunnel==0.4.0",
                             "pyodbc==4.0.35"
                         ],
-                        "enableAADIntegration": false,
+                        "enableAADIntegration": true,
                         "enableTriggerers": false,
                         "airflowEntityReferences": [],
                         "encryptedSecrets": [],
