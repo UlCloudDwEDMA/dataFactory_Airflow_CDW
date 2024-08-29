@@ -13,12 +13,12 @@
     },
     "resources": [
         {
-            "name": "[concat(parameters('factoryName'), '/afwdevcdwncus02')]",
+            "name": "[concat(parameters('factoryName'), '/afwdevcdwncus03')]",
             "type": "Microsoft.DataFactory/factories/integrationRuntimes",
             "apiVersion": "2018-06-01",
             "properties": {
                 "type": "Airflow",
-                "description": "afwdevcdwncus02",
+                "description": "afwdevcdwncus03",
                 "typeProperties": {
                     "computeProperties": {
                         "location": "South Central US",
