@@ -58,9 +58,9 @@
                             "CDW_CONFIG_SCHEMA": "CDW",
                             "CDW_ADLS_STAGE": "CDW_ADLS_STAGE",
                             "CDW_CONN_DELINEA_ENV": "_CDW_DEV",
-                            "CDW_SOURCE_DB": "DEV_SOURCE_DB",
-                            "CDW_STAGE_DB": "DEV_STAGE_DB",
-                            "CDW_CONFORM_DB": "DEV_CONFORM_DB",
+                            "CDW_SOURCE_DB": "QA_SOURCE_DB",
+                            "CDW_STAGE_DB": "QA_STAGE_DB",
+                            "CDW_CONFORM_DB": "QA_CONFORM_DB",
                             "restartweb": "1"
                         },
                         "airflowRequirements": [
