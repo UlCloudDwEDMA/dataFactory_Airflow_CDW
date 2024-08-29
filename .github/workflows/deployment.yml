@@ -2,7 +2,7 @@
 on: 
   push:
     branches:
-      - 'qa'
+      - 'prod'
     paths:
       - 'ARMTemplateParametersForFactory.json'
 name: Airflow Instance Creation In Azure DataFactory
@@ -17,14 +17,14 @@ jobs:
         # Log into Azure
       - uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS_QA }}
+          creds: ${{ secrets.AZURE_CREDENTIALS_PROD }}
 
         # Deploy ARM template
       - name: Run ARM deploy
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-          resourceGroupName: ${{ secrets.AZURE_RG_QA }}
+          resourceGroupName: ${{ secrets.AZURE_RG_PROD }}
           template: ././ARMTemplateForFactory.json
           parameters: ././ARMTemplateParametersForFactory.json
 
