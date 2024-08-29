@@ -2,7 +2,7 @@
 on: 
   push:
     branches:
-      - 'dev'
+      - 'qa'
     paths:
       - 'ARMTemplateParametersForFactory.json'
 name: Airflow Instance Creation In Azure DataFactory
@@ -24,7 +24,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
-          resourceGroupName: ${{ secrets.AZURE_RG }}
+          resourceGroupName: ${{ secrets.AZURE_RG_QA }}
           template: ././ARMTemplateForFactory.json
           parameters: ././ARMTemplateParametersForFactory.json
 
