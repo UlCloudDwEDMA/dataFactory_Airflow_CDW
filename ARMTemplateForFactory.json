@@ -13,12 +13,12 @@
     },
     "resources": [
         {
-            "name": "[concat(parameters('factoryName'), '/afwdevcdwncus01')]",
+            "name": "[concat(parameters('factoryName'), '/afwdevcdwncus02')]",
             "type": "Microsoft.DataFactory/factories/integrationRuntimes",
             "apiVersion": "2018-06-01",
             "properties": {
                 "type": "Airflow",
-                "description": "afwdevcdwncus01",
+                "description": "afwdevcdwncus02",
                 "typeProperties": {
                     "computeProperties": {
                         "location": "South Central US",
@@ -42,7 +42,10 @@
                         },
                         "airflowConfigurationOverrides": {
                             "AIRFLOW__SCHEDULER__PARSING_PROCESSES": "8",
-                            "AIRFLOW__CORE__PARALLELISM": "128"
+                            "AIRFLOW__CORE__PARALLELISM": "128",
+                            "AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG": "90",
+                            "AIRFLOW__WEBSERVER__DAG_DEFAULT_VIEW": "graph",
+                            "AIRFLOW__DATABASE__LOAD_DEFAULT_CONNECTIONS": "False"
                         },
                         "environmentVariables": {
                             "CDW_DAG_HOME": "/usr/local/airflow/dags",
