@@ -54,7 +54,7 @@
                             "CDW_AIRFLOW_REPO": "https://github.com/Underwriters-Labs/EDMA-CDW-Airflow/tree/dev",
                             "CDW_DELINEA_URL": "https://uls.secretservercloud.com",
                             "CDW_DB_CONN_ID": "cdw_db_conn_id",
-                            "CDW_CONFIG_DB": "DEV_CDW_DB",
+                            "CDW_CONFIG_DB": "QA_CDW_DB",
                             "CDW_CONFIG_SCHEMA": "CDW",
                             "CDW_ADLS_STAGE": "CDW_ADLS_STAGE",
                             "CDW_CONN_DELINEA_ENV": "_CDW_DEV",
@@ -64,7 +64,8 @@
                             "restartweb": "1"
                         },
                         "airflowRequirements": [
-                            "azure-storage-blob==12.16.0"
+                            "azure-storage-blob==12.16.0",
+                            "python-tss-sdk==1.2.2"
                         ],
                         "enableAADIntegration": true,
                         "enableTriggerers": false,
